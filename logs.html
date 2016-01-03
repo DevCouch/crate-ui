@@ -1,0 +1,10 @@
+<form novalidate class="searchForm">
+  <input type="text" id="logSearch" class="searchForm-input" placeholder="Search for logs" required ng-model="logCtrl.searchTerm">
+  <button type="button" id="logSearchButton" class="btn" ng-click="logCtrl.searchLogs()">Search</button>
+</form>
+<div class="duration">
+The request took {{logCtrl.duration}} ms.
+</div>
+<div ng-repeat="log in logCtrl.logs" class="log">
+  <div class="log-text log-level-{{log.level}}">{{log.message}}</div>
+</div>

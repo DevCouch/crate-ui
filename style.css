@@ -1,0 +1,89 @@
+.header {
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.header--fixed {
+  position: fixed;
+  width: 100%;
+  background: white;
+}
+
+.logo {
+  display: inline-block;
+  height: 100%;
+  cursor: pointer;
+}
+
+.logo-h2 {
+  padding: 0;
+  margin: 0;
+}
+
+.mainNav {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+}
+
+.log {
+
+}
+
+.log-text {
+}
+
+.searchForm, .duration {
+  margin: 10px 5px;
+}
+
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+.log-level-0, .log-level-1, .log-level-2, .log-level-3 {
+    padding:10px;
+    margin:10px 0;
+}
+.log-level-0:before, .log-level-1:before, .log-level-2:before, .log-level-3:before {
+    font-family:FontAwesome;
+    font-style:normal;
+    font-weight:400;
+    speak:none;
+    display:inline-block;
+    text-decoration:inherit;
+    width:1em;
+    margin-right:.2em;
+    text-align:center;
+    font-variant:normal;
+    text-transform:none;
+    line-height:1em;
+    margin-left:.2em;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale
+}
+.log-level-0:before {
+    content:"\f05a";
+}
+.log-level-1:before {
+    content:'\f00c';
+}
+.log-level-2:before {
+    content:'\f071';
+}
+.log-level-3:before {
+    content:'\f057';
+}
+.log-level-0 {
+    color: #00529B;
+    background-color: #BDE5F8;
+}
+.log-level-1 {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+}
+.log-level-2 {
+    color: #9F6000;
+    background-color: #FEEFB3;
+}
+.log-level-3 {
+    color: #D8000C;
+    background-color: #FFBABA;
+}
