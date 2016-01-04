@@ -22,6 +22,14 @@
         logCtrl = this;
         logCtrl.logs = [];
         logCtrl.searchTerm = '';
+        logCtrl.levels = [
+          {id: "-1", name: "All"},
+          {id: "0", name: "Debug"},
+          {id: "1", name: "Info"},
+          {id: "2", name: "Warning"},
+          {id: "3", name: "Error"},
+        ];
+        logCtrl.level = logCtrl.levels[0];
         $http.post('http://127.0.0.1:8080/log/query?limit=1000', {}).success(function(data) {
           logCtrl.logs = data.logMessages;
           logCtrl.duration = data.duration;
@@ -29,7 +37,9 @@
 
         this.searchLogs = function() {
           this.query = { "query": logCtrl.searchTerm };
-          $log.info(this.query);
+          if (logCtrl.level.id >= 0) {
+            this.query.level = logCtrl.level.id;
+          }
           $http.post("http://127.0.0.1:8080/log/query", this.query).success(function(data) {
             logCtrl.logs = data.logMessages;
             logCtrl.duration = data.duration;

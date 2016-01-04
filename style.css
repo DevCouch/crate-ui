@@ -37,6 +37,11 @@
   margin: 10px 5px;
 }
 
+.form-control.searchForm-input {
+  width: auto;
+  display: inline-block;
+}
+
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 .log-level-0, .log-level-1, .log-level-2, .log-level-3 {
     padding:10px;
