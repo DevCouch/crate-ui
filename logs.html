@@ -1,8 +1,8 @@
-<form novalidate class="searchForm">
+<form novalidate class="searchForm" ng-submit="logCtrl.searchLogs()">
   <select class="form-control searchForm-input" ng-model="logCtrl.level" ng-options="option.name for option in logCtrl.levels">
   </select>
   <input type="text" id="logSearch" class="form-control searchForm-input" placeholder="Search for logs" required ng-model="logCtrl.searchTerm">
-  <button type="button" id="logSearchButton" class="btn" ng-click="logCtrl.searchLogs()">Search</button>
+  <button type="submit" id="logSearchButton" class="btn">Search</button>
 </form>
 <div class="duration">
 The request took {{logCtrl.duration}} ms.
